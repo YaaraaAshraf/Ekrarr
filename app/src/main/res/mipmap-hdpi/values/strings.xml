@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Akrar</string>
+    <string name="types_pay">كاش</string>
+    <string-array name="pays_arrays">
+        <item>كاش</item>
+        <item>اجل</item>
+    </string-array>
+</resources>
