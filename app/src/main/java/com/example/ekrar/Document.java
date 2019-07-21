@@ -9,6 +9,6 @@ public class Document extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_document);
+        setContentView(R.layout.activity_document_listitem);
     }
 }

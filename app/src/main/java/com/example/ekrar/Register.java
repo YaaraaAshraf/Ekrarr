@@ -39,16 +39,15 @@ public class Register extends AppCompatActivity {
         btn_reg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    load(new Mainpage_details());
-
+//                    load(new Mainpage_details());
 //                FragmentManager manager = getSupportFragmentManager();
 //                FragmentTransaction ft = manager.beginTransaction();
 //                ft.replace(R.id.frame_container,Mainpage_details.newInstance(), null);
 //                ft.commit();
 
-//                Intent mainIntent = new Intent(Register.this, Mainpage_details.class);
-//                Register.this.startActivity(mainIntent);
-//                Register.this.finish();
+                Intent mainIntent = new Intent(Register.this, Main_bar.class);
+                Register.this.startActivity(mainIntent);
+                Register.this.finish();
             }
         });
         txt_create_account.setOnClickListener(new View.OnClickListener() {
@@ -59,13 +58,11 @@ public class Register extends AppCompatActivity {
                 Register.this.finish();
             }
         });
-
+    }
+//    private void load(Fragment fragment) {
+//        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+//        transaction.replace(R.id.frame_container, fragment);
+//        transaction.addToBackStack(null);
+//        transaction.commit();
     }
 
-    private void load(Fragment fragment) {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.frame_container, fragment);
-        transaction.addToBackStack(null);
-        transaction.commit();
-    }
-}

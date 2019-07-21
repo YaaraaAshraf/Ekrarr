@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/white"
+    android:orientation="vertical"
     tools:context=".salary_documents">
 
     <ImageView
@@ -15,77 +15,86 @@
         app:srcCompat="@drawable/actionbar" />
 
     <TextView
-        android:id="@+id/text_my_product"
+        android:id="@+id/txt_docu_bond"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="-70dp"
         android:text="سند قبض عيني"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black" />
+
     <ImageView
-        android:id="@+id/image_document_arrow"
+        android:id="@+id/imgarrow"
         android:layout_width="15dp"
         android:layout_height="15dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="-10dp"
         app:srcCompat="@drawable/arrow" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <RelativeLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/text_send_to"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="56dp"
-                    android:textColor="@color/black"
                     android:layout_marginLeft="330dp"
+                    android:layout_marginTop="56dp"
                     android:text="المرسل الية"
-                    android:textSize="15dp"/>
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
 
-                <EditText
+                <TextView
                     android:id="@+id/edtext_sendto_docu"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="15dp"
                     android:layout_marginTop="80dp"
                     android:layout_marginRight="10dp"
                     android:background="@drawable/rounded_edittext"
-                    android:inputType="number"
+                    android:textColor="@color/black"
                     android:paddingRight="15dp"
-                    android:layout_marginLeft="15dp"
-                    android:textColor="#000000"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
                     android:textColorHint="@color/grey" />
 
                 <TextView
                     android:id="@+id/txt_address"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="140dp"
-                    android:textColor="@color/black"
                     android:layout_marginLeft="340dp"
+                    android:layout_marginTop="140dp"
                     android:text="العنوان"
-                    android:textSize="15dp"/>
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
 
-                <EditText
+                <TextView
                     android:id="@+id/edt_address"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/black"
                     android:layout_marginTop="170dp"
                     android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:inputType="textPersonName"
                     android:background="@drawable/rounded_edittext"
-                    />
+                     />
 
                 <RelativeLayout
                     android:id="@+id/menuLayout"
@@ -101,16 +110,22 @@
                         android:text="اسم المنتج"
                         android:textColor="@color/black"
                         android:textSize="15dp" />
-                    <EditText
+
+                    <TextView
                         android:id="@+id/edt_name_of_product"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
-                        android:layout_marginTop="255dp"
-                        android:layout_marginRight="10dp"
                         android:layout_marginLeft="10dp"
-                        android:background="@drawable/rounded_edittext"
-                        />
+                        android:layout_marginTop="255dp"
+                        android:paddingRight="15dp"
+                        android:paddingLeft="15dp"
+                        android:textColor="@color/black"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/rounded_edittext" />
                 </RelativeLayout>
+
                 <TextView
                     android:id="@+id/txt_quantity"
                     android:layout_width="wrap_content"
@@ -121,7 +136,7 @@
                     android:textColor="@color/black"
                     android:textSize="15dp" />
 
-                <EditText
+                <TextView
                     android:id="@+id/text_quantity"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
@@ -129,11 +144,14 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="332dp"
                     android:layout_marginRight="10dp"
-                    android:background="@drawable/rounded_edittext"
-                    android:inputType="number"
                     android:paddingRight="15dp"
-                    android:textColor="#000000"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:background="@drawable/rounded_edittext"
+                    android:textColor="@color/black"
                     android:textColorHint="@color/grey" />
+
                 <TextView
                     android:id="@+id/txt_value"
                     android:layout_width="wrap_content"
@@ -144,7 +162,7 @@
                     android:textColor="@color/black"
                     android:textSize="15dp" />
 
-                <EditText
+                <TextView
                     android:id="@+id/text_value"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
@@ -152,11 +170,12 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="415dp"
                     android:layout_marginRight="10dp"
-                    android:background="@drawable/rounded_edittext"
-                    android:inputType="date"
-                    android:paddingLeft="10dp"
                     android:paddingRight="15dp"
-                    android:textColor="#000000"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:background="@drawable/rounded_edittext"
+                    android:textColor="@color/black"
                     android:textColorHint="@color/grey" />
 
                 <TextView
@@ -169,7 +188,7 @@
                     android:textColor="@color/black"
                     android:textSize="15dp" />
 
-                <EditText
+                <TextView
                     android:id="@+id/text_date_docu"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
@@ -177,32 +196,34 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="489dp"
                     android:layout_marginRight="10dp"
-                    android:background="@drawable/rounded_edittext"
-                    android:inputType="date"
-                    android:paddingLeft="10dp"
                     android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:background="@drawable/rounded_edittext"
                     android:textColor="@color/black"
                     android:textColorHint="@color/grey" />
+
                 <ImageView
-                    android:id="@+id/image_calender"
+                    android:id="@+id/img_calender"
                     android:layout_width="15dp"
                     android:layout_height="15dp"
-                    android:layout_marginTop="468dp"
                     android:layout_marginLeft="30dp"
+                    android:layout_marginTop="468dp"
                     app:srcCompat="@mipmap/calendar" />
 
                 <TextView
-                android:id="@+id/txt_description"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="350dp"
-                android:layout_marginTop="540dp"
-                android:text="الوصف"
-                android:textColor="@color/black"
-                android:textSize="15dp" />
+                    android:id="@+id/txt_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="350dp"
+                    android:layout_marginTop="540dp"
+                    android:text="الوصف"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
 
 
-                <EditText
+                <TextView
                     android:id="@+id/text_description"
                     android:layout_width="match_parent"
                     android:layout_height="90dp"
@@ -211,25 +232,27 @@
                     android:layout_marginTop="560dp"
                     android:layout_marginRight="10dp"
                     android:background="@drawable/square_edittext"
+                    android:ems="100"
+                    android:inputType="textMultiLine"
                     android:paddingRight="10dp"
                     android:paddingBottom="30dp"
-                    android:inputType="textMultiLine"
                     android:text="هناك حقيقة مثبتة منذ زمن طويل و هى ان المحتوى المقروء لصفحة ما ستلهى القارئ"
                     android:textColor="@color/black"
-                    android:textSize="15dp"
-                    android:ems="100"
-                    android:textColorHint="@color/grey" />
+                    android:textColorHint="@color/grey"
+                    android:textSize="15dp" />
+
                 <Button
                     android:id="@+id/btn_deliver"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginTop="670dp"
                     android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
                     android:background="@drawable/rounded_button"
-                    android:text="تاكيد استلام"/>
+                    android:text="تاكيد استلام" />
+
             </RelativeLayout>
-    </LinearLayout>
+        </LinearLayout>
     </ScrollView>
-    </LinearLayout>
+</LinearLayout>

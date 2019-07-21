@@ -2,11 +2,8 @@ package com.example.ekrar;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 public class MainActivity extends AppCompatActivity {
     private final int SPLASH_DISPLAY_LENGTH = 3000;
@@ -14,15 +11,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        new Handler().postDelayed(new Runnable(){
+        Thread mythread = new Thread() {
             @Override
             public void run() {
-
-                /* Create an Intent that will start the Register-Activity. */
-                Intent mainIntent = new Intent(MainActivity.this, Register.class);
-                MainActivity.this.startActivity(mainIntent);
-                MainActivity.this.finish();
+                try {
+                    sleep(3000);
+                    Intent intent = new Intent(getApplicationContext(), Login.class);
+                    startActivity(intent);
+                    finish();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
-        },SPLASH_DISPLAY_LENGTH);
+        };
+        mythread.start();
     }
 }
